@@ -87,9 +87,7 @@ void lersensores() {
     if(lerdown > limiar) {
       chao = i + 1;
     }
-    /* else {
-      chao = 0;
-    } */
+   
   
     //Lê as informacoes do sensor frontal
     long microsec = ultrasonic.timing();
@@ -114,29 +112,7 @@ void lersensores() {
       ladoadv = e + 1;
     }
   }
-  /*if (ladoadv =! 1 || ladoadv =! 2 || ladoadv =! 3 || ladoadv =! 4 ||) {
-    ladoadv = 0;*/
-  }
-  /*lersp = analogRead(sensores_presenca[i]);
-    
-    if (lersp == 1) {
-      ladoadv = i + 1;
-    }
-    else {
-      ladoadv = 0;
-    }*/
   
-}
-/*
-  void posicao() {
-  if((chao == 3 || chao == 4) && (ladoadv == 1)) { // Empurrado pela frente
-    frentemax();
-  }
-  if((chao == 1 || chao == 2) && (ladoadv == 4)) { // Empurrado por trás
-    re();
-  }
-}
-*/
 
 void procurando() {
   
@@ -183,34 +159,6 @@ void achou() {
   }
 }
 
-
-/* void definichao() {
-  if(chao == 1) { // Sensor frontal esquerdo
-    re();
-  }
-  if(chao == 2) { // Sensor frontal direito
-    re();
-  }
-  if(chao == 3) { // Sensor traseiro esquerdo
-    frente();
-  }
-  if(chao == 4) { // Sensor traseiro direito
-    frente();
-  }
-} */
-
-
-/* 
-// MOTOR ESQUERDO:
-
-const int in1 = D3 
-const int in2 = D5 
-
-// MOTOR DIREITO:   
-
-const int in3 = D6
-const int in4 = D9
-*/
 
 void frente() {
  analogWrite(in1,200);
